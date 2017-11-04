@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>财富测试</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/echarts.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="MoneyCanvas">
+			<div id="question">
+				<p id="QuestionContents">
+					假设，20个人，每个人初始金钱为20，随着时间的推移，每人每秒获得5金钱，在他们获得金钱的同时，会随机给4金钱到其他人,每个人的金钱会怎么变化？倘若随着富人（金钱多的人）其金钱占总财富的比例不断上升，其每回合从系统那里获得金钱的数量同时随着其金钱占比不断增长呢？我将之称为<strong>掠夺效应（Predatory effect）</strong>
+				</p>
+				<p id="goto">详细分析请访问知乎专栏</p>
+				<a href="https://zhuanlan.zhihu.com/yuan123" id="gotoHref">zhuanlan.zhihu.com/yuan123</a>
+				<a href="https://github.com/ATURBO" id="gotoHref1">STAR ME ON GITHUB!</a>
+				<p id="QuestionSlogan">Question:</p>
+			</div>
+			<div id="start">START</div>
+			<div id="time">0</div>
+			<div id="duration">s</div>
+
+			<div id="random">
+				<h5>金币总量：</h5>
+				<canvas id="MoneyRandom"></canvas>
+			</div>
+
+			<div id="rank">
+				<h5>金币排行：</h5>
+				<canvas id="MoneyRank"></canvas>
+			</div>
+
+			<div id="diff_dis">
+				<h5 id="jicha">极差(贫富差距)：</h5>
+				<canvas id="diff"></canvas>
+
+			</div>
+
+			<div id="rules">
+				<div id="whiteback">
+					<span id="rulesText">穷人越穷，富人越富 </span>
+					<span id="rulesText1"> -《圣经·马太福音》</span>
+					<span id="line"></span>
+					<span id="rulesText2">假设富人的财富占总财富的比例越大，其从系统那儿获取金钱的数量就越多（信息不对称情况下，各个人可利用的社会资源也会不同）</span>
+
+				</div>
+				<div id="doRules">START WORK</div>
+			</div>
+
+			<!--//这个模块用来显示极差（贫富差距）在开启“掠夺模式”和未开启“掠夺模式”的不同变化
+			//图标用折线图表示，为了方便，使用了外部js图形库chartjs-->
+
+			<div id="diffChange">
+
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		</script>
+
+	</body>
+	<script src="js/DynamicMoney.js"></script>
+
+</html>
