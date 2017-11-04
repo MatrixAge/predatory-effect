@@ -1,0 +1,218 @@
+body {
+	background-color: whitesmoke;
+	height: 1100px;
+}
+
+h5 {
+	font-family: simsun;
+	color: darkgray;
+}
+
+#question {
+	width: 1200px;
+	height: 100px;
+	background: #4ccd58;
+	border-radius: 10px 10px 0 0;
+}
+
+#goto{
+	position: absolute;
+	top: 1000px;
+	left: 540px;
+	color: #333;
+	opacity: 0.5;
+	font-size: 12px;
+}
+
+#gotoHref{
+	position: absolute;
+	top: 1030px;
+	left: 525px;
+	color: #333;
+	opacity: 0.8;
+	font-size: 12px;
+}
+
+#gotoHref1{
+	position: absolute;
+	top: 78px;
+	left: 950px;
+	color: #333;
+	opacity: 0.5;
+	font-size: 12px;
+	font-weight: bolder;
+}
+#QuestionSlogan {
+	font-size: 50px;
+	font-weight: bolder;
+	color: white;
+	position: absolute;
+	top: -88px;
+	left: 20px;
+	text-shadow: 5px 2px 6px #A9A9A9;
+}
+
+#QuestionContents {
+	position: absolute;
+	margin-left: 100px;
+	margin-right: 100px;
+	top: 8px;
+	font-size: 14px;
+	color: white;
+	font-family: simhei;
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+
+#start {
+	position: absolute;
+	top: 130px;
+	left: 100px;
+	width: 80px;
+	height: 40px;
+	background: #4CCD58;
+	color: white;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 15px;
+	font-family: "方正兰亭超细黑简体";
+	font-weight: bold;
+}
+
+#time {
+	position: absolute;
+	right: 115px;
+	top: 140px;
+	color: grey;
+	font-size: 20px;
+}
+
+#duration {
+	position: absolute;
+	right: 100px;
+	top: 140px;
+	color: grey;
+	font-size: 20px;
+}
+
+#MoneyCanvas {
+	width: 1200px;
+	height: 1000px;
+	position: relative;
+	left: 150px;
+	top: 50px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 1px 1px 30px #A9A9A9;
+}
+
+#random {
+	position: absolute;
+	left: 100px;
+	top: 200px;
+}
+
+#rank {
+	position: absolute;
+	right: 100px;
+	top: 200px;
+}
+
+#MoneyRandom {
+	width: 400px;
+	height: 250px;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#MoneyRank {
+	width: 400px;
+	height: 250px;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#diff_dis {
+	position: absolute;
+	left: 100px;
+	top: 500px;
+}
+
+#diff {
+	position: absolute;
+	top: 40px;
+	width: 1000px;
+	height: 40px;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#rules {
+	position: absolute;
+	width: 160px;
+	height: 250px;
+	top: 260px;
+	left: 520px;
+	background: #F5F5F5;
+	border-radius: 10px;
+	box-shadow: 1px 1px 30px #ebebeb;
+}
+
+#rulesText {
+	position: relative;
+	top: 25px;
+	left: 10px;
+	font-family: "楷体", "楷体_GB2312";
+	font-size: 15px;
+}
+
+#rulesText1 {
+	position: absolute;
+	top: 56px;
+	left: 38px;
+	font-family: "楷体", "楷体_GB2312";
+	font-size: 12px;
+}
+
+#whiteback {
+	width: auto;
+	height: 190px;
+	background: white;
+	border-radius: 10px 10px 0px 0px;
+}
+
+#rulesText2 {
+	position: absolute;
+	width: 140px;
+	top: 90px;
+	left: 16px;
+	font-family: "楷体", "楷体_GB2312";
+	font-size: 13px;
+	background: white;
+}
+
+#doRules {
+	position: absolute;
+	top: 190px;
+	width: 160px;
+	height: 60px;
+	background: #4CCD58;
+	color: white;
+	border-radius: 0px 0px 10px 10px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 15px;
+	font-family: "方正兰亭超细黑简体";
+	font-weight: bold;
+}
+
+#diffChange {
+	position: absolute;
+	top: 600px;
+	left: 100px;
+	width: 1000px;
+	height: 360px;
+	border-radius: 10px;
+	transition-property: all ;
+}
