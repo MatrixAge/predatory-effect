@@ -19,7 +19,7 @@
       margin-bottom: 20px;
       text-align: justify;
       color: #1a1a1a;
-      font-weight: 600;
+      font-weight: 600; 
 }
 
 .data_wrap {
@@ -35,7 +35,7 @@
       line-height: 4vh;
       text-align: center;
       border: none;
-      background-color: transparent;
+      background-color: white;
       outline: none;
       border: 2px solid #1a1a1a;
       color: #1a1a1a;
@@ -55,21 +55,28 @@
 .center .title {
       font-size: 18px;
       font-weight: 600;
-      color: white;
+      color: #1a1a1a;
       padding: 10px;
 }
 
 .center .rank_card {
       background-color: white;
       width: 40%;
+      box-shadow: 0 2px 2px rgba(238, 238, 238, 0.6);
+      border: 1px solid #eee;
 }
 
 .rules {
       width: 20%;
-      padding: 0 40px;
+      padding:20px 40px;
       font-size: 15px;
       line-height: 2;
-      color: #666;
+      color: #1a1a1a;
+      font-weight: 600;
+      background-color: white;
+      box-shadow: 0 2px 2px rgba(238, 238, 238, 0.6);
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
 }
 
 .rules .btn_do_rules {
@@ -95,12 +102,22 @@
       color: #1a1a1a;
 }
 
+.diff_dis .diff{
+      box-shadow: 0 2px 2px rgba(238, 238, 238, 0.6);
+      border: 1px solid #eee;
+      border-radius: 4px;
+}
+
 #MoneyRandom {
       height: 250px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
 }
 
 #MoneyRank {
       height: 250px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
 }
 
 #diff {
@@ -114,4 +131,7 @@
       height: calc(100vh - 20px - 40px - 10px - 20px - 20px - 290px - 20px - 4vh - 8vh);
       transition-property: all;
       background-color: white;
+      box-shadow: 0 2px 2px rgba(238, 238, 238, 0.6);
+      border: 1px solid #eee;
+      border-radius: 4px;
 }
