@@ -112,6 +112,6 @@
 #diffChange {
       width: 100%;
       height: calc(100vh - 20px - 40px - 10px - 20px - 20px - 290px - 20px - 4vh - 8vh);
-      border-radius: 10px;
       transition-property: all;
+      background-color: white;
 }
