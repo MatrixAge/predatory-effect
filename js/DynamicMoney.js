@@ -26,7 +26,6 @@ function People(name, money) {
 	this.name = name;
 	this.money = money;
 }
-//People.prototype.money = null;还可以通过原型为people添加属性
 
 //通过内建数组用for循环进行批量赋值
 let custom = new Array(20);
@@ -48,7 +47,6 @@ function giveMoney() {
 			ran = Math.floor(Math.random() * 20);
 		}
 		rand();
-		console.log(ran);
 
 		function equal() {
 			if(ran == i) {
@@ -134,8 +132,6 @@ function proportion() {
 		propMoney[i] = Math.ceil(custom[i].money / totalMoney * 100);
 		console.log('额外金币获得比例：' + propMoney[i]);
 	}
-
-	console.log("金钱总量为：" + totalMoney);
 }
 
 //设置一个函数，根据每个人的金钱占比，为每个人配备不同的金钱获取值（每回合从系统那里获取额外金钱的数量）
@@ -191,7 +187,6 @@ function moneySort() {
 	console.log('排序之后的数组：' + customMoney.sort(sortNumber));
 	rankMoney = customMoney.sort(sortNumber);
 	console.log(rankMoney);
-
 }
 
 function draw1() {
@@ -246,9 +241,8 @@ setInterval(function() {
 //绘制折线图的方法
 
 function draw3() {
-
-	var echart = echarts.init(document.getElementById('diffChange'));
-	var option = {
+	let  echart = echarts.init(document.getElementById('diffChange'));
+	let option = {
 		title: {
 			text: '极差变化情况'
 		},
@@ -274,5 +268,4 @@ function draw3() {
 	//每次窗口大小改变的时候都会触发onresize事件，这个时候我们将echarts对象的尺寸赋值给窗口的大小这个属性，从而实现图表对象与窗口对象的尺寸一致的情况
 	window.onresize = echart.resize;
 	echart.setOption(option);
-
 }
