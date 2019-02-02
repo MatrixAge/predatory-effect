@@ -63,12 +63,6 @@ function giveMoney() {
       }
 }
 
-function showMoney() {
-      for (let i = 0, j = custom.length; i < j; i++) {
-            console.log(custom[i].name + '_money:' + custom[i].money)
-      }
-}
-
 state.onclick = function () {
 
       DmoneyUnit();
@@ -82,7 +76,6 @@ state.onclick = function () {
 
                   getMoney();
                   giveMoney();
-                  //			showMoney();
                   moneySort();
                   ExMoney[timelongth] = rankMoney[19] - rankMoney[0];
 
