@@ -8,12 +8,6 @@ let timelongth = 0;
 let changetime;
 let changetime1;
 
-//指向对象的prototype
-//let custom[0] = new People('peo1', '');
-//let custom[1] = new People('peo2', '');
-//People.prototype.age = null;
-//people1.age = 30; 
-//console.log(people1.age);
 //已经给custom成员的money属性赋值，现在给写两个方法
 //第一个方法的功能是<每人每秒获得10金钱>
 //第二个方法的功能是<每人随机给除了自己之外的人2金币>
@@ -232,7 +226,7 @@ setInterval(function () {
 }, 1000)
 
 //绘制折线图的方法
-
+ 
 function draw3() {
       let echart = echarts.init(document.getElementById('diffChange'));
       let option = {
@@ -247,7 +241,7 @@ function draw3() {
             },
             xAxis: {
                   data: ti,
-                  name: 'time/s'
+                  name: '/s'
             },
             yAxis: {
                   name: 'money'
