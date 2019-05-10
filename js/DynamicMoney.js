@@ -80,7 +80,7 @@ state.onclick = function () {
                   ExMoney[timelongth] = rankMoney[19] - rankMoney[0];
 
                   draw3();
-                  jicha.innerHTML = '极差（贫富差距）：' + (rankMoney[19] - rankMoney[0]);
+                  jicha.innerHTML = 'Extreme poverty：' + (rankMoney[19] - rankMoney[0]);
 
             }, 1000);
       } else {
@@ -153,7 +153,7 @@ function draw() {
       let cheight = myCanvas.height;
       let canvasCtx = myCanvas.getContext('2d');
       canvasCtx.clearRect(0, 0, cwidth, cheight);
-      canvasCtx.fillStyle = "#4CCD58";
+      canvasCtx.fillStyle = "red";
 
       for (let i = 0, j = custom.length; i < j; i++) {
             canvasCtx.fillRect(i * 14 + 12, (5800 - custom[i].money) / 40, 10, (custom[i].money) / 40);
@@ -189,7 +189,7 @@ function draw1() {
       let cheight1 = myCanvas1.height;
       let canvasCtx1 = myCanvas1.getContext('2d');
       canvasCtx1.clearRect(0, 0, cwidth1, cheight1);
-      canvasCtx1.fillStyle = "#4CCD58";
+      canvasCtx1.fillStyle = "red";
 
       for (let i = 0, j = custom.length; i < j; i++) {
             canvasCtx1.fillRect(i * 14 + 12, (5800 - rankMoney[i]) / 40, 10, (rankMoney[i]) / 40);
@@ -209,7 +209,7 @@ function draw2() {
       let cheight2 = myCanvas2.height;
       let canvasCtx2 = myCanvas2.getContext('2d');
       canvasCtx2.clearRect(0, 0, cwidth2, cheight2);
-      canvasCtx2.fillStyle = "#4CCD58";
+      canvasCtx2.fillStyle = "red";
 
       canvasCtx2.fillRect(4, 65, (rankMoney[19] - rankMoney[0]) / 20, 20);
 
@@ -237,25 +237,25 @@ function draw3() {
       let echart = echarts.init(document.getElementById('diffChange'));
       let option = {
             title: {
-                  text: '极差变化情况',
+                  text: 'Range variation',
                   x: 'center',
-                  y:20
+                  y: 10
             },
             tooltip: {},
             legend: {
-                  data: ['用户来源']
+                  data: ['Source of user']
             },
             xAxis: {
                   data: ti,
-                  name: '时间/s'
+                  name: 'time/s'
             },
             yAxis: {
-                  name: '金钱'
+                  name: 'money'
             },
-            color: ['green'],
-            backgroundColor: 'white',
+            color: ['red'],
+            backgroundColor: '#111',
             series: [{
-                  name: '访问量',
+                  name: 'traffic',
                   type: 'line',
                   smooth: true,
                   data: ExMoney
@@ -265,3 +265,58 @@ function draw3() {
       window.onresize = echart.resize;
       echart.setOption(option);
 }
+
+//中英文切换
+let question_txt = document.querySelector('.question_txt')
+let question_state = document.querySelector('.question_state')
+let title_amount = document.querySelector('.title_amount')
+let title_rank = document.querySelector('.title_rank')
+let text_gospel = document.querySelector('.text_gospel')
+let text_assunmption = document.querySelector('.text_assunmption')
+let text_jicha = document.querySelector('#jicha')
+
+let cn_question_txt = '假设，20个人，每个人初始金钱为20，随着时间的推移，每人每秒获得5金钱，在他们获得金钱的同时，会随机给4金钱到其他人,每个人的金钱会怎么变化？倘若随着富人（金钱多的人）其金钱占总财富的比例不断上升，其每回合从系统那里获得金钱的数量同时随着其金钱占比不断增长呢？'
+let cn_question_state = '我将之称为掠夺效应.'
+let cn_title_amount = '金币总量：'
+let cn_title_rank = '金币排行：'
+let cn_text_gospel = '穷人越穷，富人越富 -《圣经·马太福音》'
+let cn_text_assunmption = '假设富人的财富占总财富的比例越大，其从系统那儿获取金钱的数量就越多（信息不对称情况下，各个人可利用的社会资源也会不同）'
+let cn_text_jicha = '极差(贫富差距)：'
+
+let en_question_txt = `So let's say 20 people, each of them starts with 20 dollars, and over time, each of them
+gets 5 dollars per second, and as they get their money, they randomly give 4 dollars to
+each other, so what's going to happen to their money? What if, as the rich (the people
+with the most money) increase their share of total wealth, the amount of money they
+receive per turn from the system also increases as their share of total wealth?`
+let en_question_state = 'I call this the predatory effect..'
+let en_title_amount = 'Amount of coins：'
+let en_title_rank = 'Coins rank:'
+let en_text_gospel = 'The poor get poorer and the rich get richer - 《 the Gospel of Matthew 》'
+let en_text_assunmption = 'It is assumed that the greater the proportion of the wealth of the rich in the total wealth, the more money they will get from the system (in the case of information asymmetry, the social resources available to each person will be different).'
+let en_text_jicha = 'Extreme poverty：'
+
+document.querySelector('.btn_cn').addEventListener('click', function () {
+      document.querySelector('.btn_en').classList.remove('active')
+      this.classList.add('active')
+
+      question_txt.innerText = cn_question_txt
+      question_state.innerText = cn_question_state
+      title_amount.innerText = cn_title_amount
+      title_rank.innerText = cn_title_rank
+      text_gospel.innerText = cn_text_gospel
+      text_assunmption.innerText = cn_text_assunmption
+      text_jicha.innerText = cn_text_jicha
+})
+
+document.querySelector('.btn_en').addEventListener('click', function () {
+      document.querySelector('.btn_cn').classList.remove('active')
+      this.classList.add('active')
+
+      question_txt.innerText = en_question_txt
+      question_state.innerText = en_question_state
+      title_amount.innerText = en_title_amount
+      title_rank.innerText = en_title_rank
+      text_gospel.innerText = en_text_gospel
+      text_assunmption.innerText = en_text_assunmption
+      text_jicha.innerText = en_text_jicha
+})
