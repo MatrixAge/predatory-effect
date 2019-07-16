@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+            <title>Predatory Effect</title>
+            <meta charset="utf-8" />
+            <meta
+                  name="viewport"
+                  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+            >
+            </meta>
+            <link
+                  rel="stylesheet"
+                  href="css/normalize.css"
+            />
+            <link
+                  rel="stylesheet"
+                  href="css/style.css"
+            />
+            <link
+                  rel="stylesheet"
+                  href="css/atom.min.css"
+            />
+            <script src="js/echarts.min.js"></script>
+      </head>
+
+      <body>
+            <div class="langauage flex justify_center w_100">
+                  <button class="btn_en btn active">English</button>
+                  <button class="btn_cn btn">中文</button>
+            </div>
+            <div
+                  id="MoneyCanvas"
+                  class="flex flex_column"
+            >
+                  <div
+                        id="question"
+                        class="flex flex_column"
+                  >
+                        <!-- <p class="question_text">
+                              假设，20个人，每个人初始金钱为20，随着时间的推移，每人每秒获得5金钱，在他们获得金钱的同时，会随机给4金钱到其他人,每个人的金钱会怎么变化？倘若随着富人（金钱多的人）其金钱占总财富的比例不断上升，其每回合从系统那里获得金钱的数量同时随着其金钱占比不断增长呢？
+                        </p>
+                        <p class="question_text">
+                              我将之称为掠夺效应.
+                        </p> -->
+                        <p class="question_text question_txt">
+                              So let's say 20 people, each of them starts with 20 dollars, and over time, each of them
+                              gets 5 dollars per second, and as they get their money, they randomly give 4 dollars to
+                              each other, so what's going to happen to their money? What if, as the rich (the people
+                              with the most money) increase their share of total wealth, the amount of money they
+                              receive per turn from the system also increases as their share of total wealth?
+                        </p>
+                        <p class="question_text question_state">
+                              I call this the predatory effect.
+                        </p>
+                  </div>
+                  <div class="data_wrap flex flex_column overflow_hidden">
+                        <div class="options flex justify_between align_center">
+                              <div class="left">
+                                    <button
+                                          id="start"
+                                          class="btn_start"
+                                    >START</button>
+                              </div>
+                              <div class="right flex">
+                                    <div
+                                          id="time"
+                                          class="mr_10"
+                                    >0</div>
+                                    <div id="duration">S</div>
+                              </div>
+                        </div>
+
+                        <div class="center flex flex_column w_100">
+                              <div
+                                    id="random"
+                                    class="random_rank rank_card flex flex_column border_box"
+                              >
+                                    <!-- <span class="title">金币总量：</span> -->
+                                    <span class="title title_amount">Amount of coins：</span>
+                                    <canvas
+                                          id="MoneyRandom"
+                                          class="w_100 overflow_hidden"
+                                    ></canvas>
+                              </div>
+                              <div
+                                    id="rank"
+                                    class="rank_card flex flex_column"
+                              >
+                                    <!-- <span class="title">金币排行：</span> -->
+                                    <span class="title title_rank">Coins rank:</span>
+                                    <canvas
+                                          id="MoneyRank"
+                                          class="w_100 overflow_hidden"
+                                    ></canvas>
+                              </div>
+                              <div
+                                    id="rules"
+                                    class="rules flex flex_column justify_between border_box"
+                              >
+                                    <div
+                                          id="whiteback"
+                                          class="flex flex_column"
+                                    >
+                                          <!-- <span>穷人越穷，富人越富 -《圣经·马太福音》</span>
+                                          <span>假设富人的财富占总财富的比例越大，其从系统那儿获取金钱的数量就越多（信息不对称情况下，各个人可利用的社会资源也会不同）</span> -->
+                                          <span class="text_gospel">The poor get poorer and the rich get richer - 《 the
+                                                Gospel of Matthew
+                                                》</span>
+                                          <span class="text_assunmption">It is assumed that the greater the proportion
+                                                of the wealth of the rich
+                                                in the total wealth, the more money they will get from the system (in
+                                                the case of information asymmetry, the social resources available to
+                                                each person will be different).</span>
+                                    </div>
+                                    <div
+                                          id="doRules"
+                                          class="btn_do_rules border_box"
+                                    >START WORK</div>
+                              </div>
+                        </div>
+                        <div
+                              id="diff_dis"
+                              class="diff_dis flex flex_column"
+                        >
+                              <!-- <span
+                                    id="jicha"
+                                    class="mb_10"
+                              >极差(贫富差距)：</span> -->
+                              <span
+                                    id="jicha"
+                                    class="mb_10"
+                              >Extreme poverty：</span>
+                              <canvas
+                                    id="diff"
+                                    class="diff"
+                              ></canvas>
+                        </div>
+                        <div id="diffChange"></div>
+                  </div>
+            </div>
+      </body>
+      <script src="js/DynamicMoney.js"></script>
+
+</html>
